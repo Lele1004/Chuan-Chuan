@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>發布書籍 - 傳傳</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="page-publish">
+    <header>
+        <a href="index.html" class="logo">傳傳</a>
+        <nav></nav>
+    </header>
+
+    <main>
+        <div class="form-container" style="max-width: 600px;">
+            <h2 style="text-align:center; margin-bottom:20px;">上架二手書</h2>
+            <form id="publish-form">
+                <div class="form-group">
+                    <label>書籍名稱</label>
+                    <input type="text" id="p-title" required>
+                </div>
+                <div class="form-group">
+                    <label>價格 (NT$)</label>
+                    <input type="number" id="p-price" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label>標籤 (Tags)</label>
+                    <input type="text" id="p-tags" placeholder="例如：小說, 魔法, 必修 (請用逗號隔開)">
+                    <small>輸入 #關鍵字 方便買家搜尋</small>
+                </div>
+                <div class="form-group">
+                    <label>圖片網址 (URL)</label>
+                    <input type="text" id="p-image" placeholder="因無法製作後端，此處可空白 (系統將使用 image0)">
+                </div>
+                <div class="form-group">
+                    <label>書況描述</label>
+                    <textarea id="p-desc" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">確認發布</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+    <a href="about.html" class="footer-link footer-left">關於我們</a>
+    
+    <p>&copy; 2024 Chuan Chuan.</p>
+    
+    <a href="log.html" class="footer-link footer-right">更新日誌</a>
+    </footer>
+    
+    <script src="../assets/script.js"></script>
+</body>
+</html>

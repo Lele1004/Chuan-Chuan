@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車 - 傳傳</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="page-cart">
+    <header>
+        <a href="index.html" class="logo">傳傳</a>
+        <nav></nav>
+    </header>
+
+    <main>
+        <h2 style="margin: 30px 0; text-align: center;">您的購物車</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th width="40%">書籍</th>
+                    <th width="20%">數量</th>
+                    <th width="20%">小計</th>
+                    <th width="20%">操作</th>
+                </tr>
+            </thead>
+            <tbody id="cart-list">
+                </tbody>
+        </table>
+
+        <div style="text-align: right; margin-top: 20px; font-size: 1.1rem; line-height: 1.8;">
+            <p>商品總計：NT$ <span id="cart-subtotal">0</span></p>
+            <p>運費：NT$ 60</p>
+            <hr style="width: 200px; margin-left: auto; border: 0.5px solid #555;">
+            <div style="font-size: 1.5rem; margin-top: 10px;">
+                應付金額：<strong style="color: var(--accent-gold);">NT$ <span id="cart-total">0</span></strong>
+            </div>
+        </div>
+
+        <div style="text-align: right; margin-top: 20px;">
+            <button id="checkout-btn" class="btn" style="width: auto; padding: 15px 50px; font-size: 1.2rem;">前往結帳</button>
+        </div>
+    </main>
+
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="checkout-modal">
+            <span class="close-modal">&times;</span>
+            <h2 style="text-align:center; color:var(--forest-bg);">確認訂單資訊</h2>
+            
+            <div class="checkout-summary">
+                <p>訂單總金額：<strong style="color:#e74c3c; font-size:1.2rem;">NT$ <span id="modal-total">0</span></strong></p>
+            </div>
+
+            <form id="order-form">
+                <div class="form-group">
+                    <label>收件人姓名</label>
+                    <input type="text" id="r-name" required placeholder="請輸入真實姓名">
+                 </div>
+    
+                <div class="form-group">
+                    <label>電子信箱 (Email)</label>
+                    <input type="email" id="r-email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label>聯絡電話</label>
+                    <input type="tel" id="r-phone" required placeholder="09xxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label>收件地址 (或超商門市)</label>
+                    <input type="text" id="r-addr" required placeholder="請輸入詳細地址">
+                </div>
+                <div class="form-group">
+                    <label>付款方式</label>
+                    <select id="r-pay">
+                        <option value="貨到付款">貨到付款</option>
+                        <option value="LINE PAY">LINE PAY</option>
+                        <option value="信用卡">信用卡 (Visa/Master)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="background: var(--danger); border:none;">確認下單</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <a href="about.html" class="footer-link footer-left">關於我們</a>
+        <p>&copy; 2024 Chuan Chuan.</p>
+        <a href="log.html" class="footer-link footer-right">更新日誌</a>
+    </footer>
+    <script src="../assets/script.js"></script>
+</body>
+</html>

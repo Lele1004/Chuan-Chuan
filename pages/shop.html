@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瀏覽書籍 - 傳傳</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="page-shop">
+
+    <header>
+        <a href="index.html" class="logo">傳傳</a>
+        <nav></nav> 
+    </header>
+
+    <main>
+        <div class="carousel-container">
+            <div class="carousel-slide fade" onclick="location.href='register.html'">
+                <img src="../assets/images/slogan1.jpg" alt="註冊首購免運">
+            </div>
+            <div class="carousel-slide fade" onclick="searchByTag('漫畫')">
+                <img src="../assets/images/slogan2.jpg" alt="傳傳漫畫節">
+            </div>
+            <div class="carousel-slide fade" onclick="location.href='cart.html'">
+                <img src="../assets/images/slogan3.jpg" alt="滿千免運">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div style="margin: 40px 0; text-align:center;">
+            <input type="text" id="search-input" placeholder="搜尋書名或 #標籤..." 
+                   style="padding: 12px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+            <div id="tag-cloud" style="margin-top:15px; color:#aaa; font-size:0.9rem;"></div>
+        </div>
+        
+        <div id="product-list" class="product-grid"></div>
+    </main>
+
+    <footer>
+        <a href="about.html" class="footer-link footer-left">關於我們</a>
+        <p>&copy; 2024 Chuan Chuan.</p>
+        <a href="log.html" class="footer-link footer-right">更新日誌</a>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>
